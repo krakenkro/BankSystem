@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d85ab75b-2c0e-48e8-8ec9-9ff9e9f3f6f7": {
+      "ProjectGuid": "d85ab75b-2c0e-48e8-8ec9-9ff9e9f3f6f7",
+      "DisplayName": "BankSystemBota",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

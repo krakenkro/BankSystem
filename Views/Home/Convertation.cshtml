@@ -1,0 +1,29 @@
+﻿@model BankSystemBota.Models.CurrencyConverter
+
+<h4>Конвертация</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Convertation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mb-3">
+                 <span class="input-group-text" id="basic-addon1">Тенге в</span>
+                 <input type="number" asp-for="Tenge" class="form-control" placeholder="Введите сумму" aria-label="tenge" aria-describedby="basic-addon1">
+            </div>
+            <div class="form-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Валюта</span>
+                <select class="form-select" asp-for="CurrencyType" class="col-lg-2" asp-items="Html.GetEnumSelectList<CurrencyType>()">
+                    <option selected value="">Выберите валюту</option>
+                </select>
+            </div>
+            <div class="form-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Результат</span>
+                <input class="form-control" type="text" disabled="disabled" class="col-lg-2" asp-for="Result" />
+            </div>
+            <div class="form-group">
+                @*<input type="submit" value="Конвертировать" asp-action="Convertation" />  *@
+                <button type="button" class="btn btn-primary btn-lg" asp-action="Convertation">Конвертировать</button>
+            </div>
+        </form>
+    </div>
+</div>

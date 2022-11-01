@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BankSystemBota.Models.DepositInfo>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+
+  <div class="col">
+    <div class="card border-dark mb-3">
+      <div class="card-header">Конвертация</div>
+      <div class="card-body text-dark">
+        <form asp-action="Convertation">
+            <div class="form-group mb-3">
+                 <span class="input-group-text" id="basic-addon1">Тенге в</span>
+                 <input type="number" name="Tenge" class="form-control" placeholder="Введите сумму" aria-label="tenge" aria-describedby="basic-addon1">
+            </div>
+            <div class="form-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Валюта</span>
+                <select class="form-select" name="CurrencyType" class="col-lg-2" asp-items="Html.GetEnumSelectList<CurrencyType>()">
+                    <option selected value="">Выберите валюту</option>
+                </select>
+            </div>
+            <div class="form-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Результат</span>
+                <input class="form-control" type="text" disabled="disabled" class="col-lg-2" name="Result" />
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-lg" asp-action="Convertation">Конвертировать</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card border-dark mb-3">
+      <div class="card-header">Депозиты</div>
+      <div class="card-body text-dark">
+        @Html.Partial("DepositList", Model)
+      </div>
+    </div>
+  </div>
+   
+</div>
